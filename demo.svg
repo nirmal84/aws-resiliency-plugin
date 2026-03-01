@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520">
+<defs>
+  <style>
+    /* 36-second loop — 4 scenes × 9s each */
+    @keyframes s1 { 0%{opacity:0} 2%{opacity:1} 23%{opacity:1} 25%{opacity:0} 100%{opacity:0} }
+    @keyframes s2 { 0%{opacity:0} 25%{opacity:0} 27%{opacity:1} 48%{opacity:1} 50%{opacity:0} 100%{opacity:0} }
+    @keyframes s3 { 0%{opacity:0} 50%{opacity:0} 52%{opacity:1} 73%{opacity:1} 75%{opacity:0} 100%{opacity:0} }
+    @keyframes s4 { 0%{opacity:0} 75%{opacity:0} 77%{opacity:1} 98%{opacity:1} 100%{opacity:0} }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .s1 { animation: s1 36s ease-in-out infinite; }
+    .s2 { animation: s2 36s ease-in-out infinite; }
+    .s3 { animation: s3 36s ease-in-out infinite; }
+    .s4 { animation: s4 36s ease-in-out infinite; }
+    .pulse { animation: pulse 1.2s ease-in-out infinite; }
+  </style>
+</defs>
+
+<!-- ── Background ─────────────────────────────────────────────────────── -->
+<rect width="900" height="520" fill="#0d1117"/>
+
+<!-- ── Top bar (always visible) ──────────────────────────────────────── -->
+<rect width="900" height="44" fill="#161b22"/>
+<line x1="0" y1="44" x2="900" y2="44" stroke="#30363d" stroke-width="1"/>
+<circle cx="20" cy="22" r="6" fill="#f85149"/>
+<circle cx="40" cy="22" r="6" fill="#d29922"/>
+<circle cx="60" cy="22" r="6" fill="#3fb950"/>
+<text x="450" y="27" text-anchor="middle"
+      font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+      font-size="12" fill="#6e7681">aws-resiliency · Claude Code &amp; Kiro</text>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     SCENE 1 — INTRO  (0 – 9 s)
+     ══════════════════════════════════════════════════════════════════════ -->
+<g class="s1">
+  <!-- glow rings -->
+  <circle cx="450" cy="200" r="90" fill="none" stroke="#ff9900" stroke-width="1" opacity="0.12"/>
+  <circle cx="450" cy="200" r="68" fill="none" stroke="#ff9900" stroke-width="1" opacity="0.20"/>
+  <circle cx="450" cy="200" r="46" fill="none" stroke="#ff9900" stroke-width="1" opacity="0.30"/>
+
+  <!-- AWS shield -->
+  <polygon points="450,155 500,178 500,238 450,265 400,238 400,178"
+           fill="#ff990018" stroke="#ff9900" stroke-width="2.5"/>
+  <!-- lightning bolt -->
+  <polygon points="455,176 446,200 455,200 445,228 454,204 445,204"
+           fill="#ff9900"/>
+
+  <!-- title -->
+  <text x="450" y="300" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="27" font-weight="700" fill="#e6edf3">AWS Resiliency Skill for Claude Code &amp; Kiro</text>
+
+  <!-- subtitle -->
+  <text x="450" y="330" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" fill="#6e7681">Failure-mode-first architecture reviews · IaC + Application code</text>
+
+  <!-- domain badges -->
+  <rect x="228" y="358" width="106" height="26" rx="5" fill="#58a6ff15" stroke="#58a6ff" stroke-width="1"/>
+  <text x="281" y="375" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#58a6ff">IaC Review</text>
+
+  <rect x="346" y="358" width="100" height="26" rx="5" fill="#bc8cff15" stroke="#bc8cff" stroke-width="1"/>
+  <text x="396" y="375" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#bc8cff">App Code</text>
+
+  <rect x="458" y="358" width="150" height="26" rx="5" fill="#3fb95015" stroke="#3fb950" stroke-width="1"/>
+  <text x="533" y="375" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#3fb950">Well-Architected</text>
+
+  <!-- audience line -->
+  <text x="450" y="422" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#6e7681">Cloud Engineers · SREs · Platform Engineers · Cloud Architects</text>
+</g>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     SCENE 2 — CODE INPUT  (9 – 18 s)
+     ══════════════════════════════════════════════════════════════════════ -->
+<g class="s2">
+  <!-- left panel -->
+  <rect x="32" y="58" width="400" height="358" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="48" y="81" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="12" fill="#6e7681">infrastructure.yaml</text>
+  <line x1="32" y1="91" x2="432" y2="91" stroke="#30363d" stroke-width="1"/>
+
+  <!-- comment -->
+  <text x="48" y="116" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#6e7681"># CloudFormation — RDS</text>
+  <!-- code -->
+  <text x="48" y="142" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#e6edf3">RDSInstance:</text>
+  <text x="48" y="166" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#e6edf3">  Type: AWS::RDS::DBInstance</text>
+  <text x="48" y="190" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#e6edf3">  Properties:</text>
+
+  <!-- MultiAZ: false — CRITICAL -->
+  <rect x="40" y="198" width="384" height="24" rx="3" fill="#f8514922"/>
+  <text x="48" y="215" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#f85149">    MultiAZ: false</text>
+  <text x="344" y="215" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="11" fill="#f85149">◀ CRITICAL</text>
+
+  <!-- BackupRetentionPeriod: 1 — HIGH -->
+  <rect x="40" y="225" width="384" height="24" rx="3" fill="#d2992222"/>
+  <text x="48" y="242" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#d29922">    BackupRetentionPeriod: 1</text>
+  <text x="344" y="242" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="11" fill="#d29922">◀ HIGH</text>
+
+  <!-- DeletionProtection: false — MEDIUM -->
+  <rect x="40" y="252" width="384" height="24" rx="3" fill="#db6d2822"/>
+  <text x="48" y="269" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#db6d28">    DeletionProtection: false</text>
+  <text x="344" y="269" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="11" fill="#db6d28">◀ MEDIUM</text>
+
+  <!-- clean lines -->
+  <text x="48" y="296" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#e6edf3">    StorageEncrypted: true</text>
+  <text x="48" y="320" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#e6edf3">    DBInstanceClass: db.t3.medium</text>
+  <text x="48" y="344" font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#e6edf3">    Engine: postgres</text>
+
+  <!-- arrow -->
+  <line x1="436" y1="237" x2="460" y2="237" stroke="#ff9900" stroke-width="2"/>
+  <polygon points="460,237 452,232 452,242" fill="#ff9900"/>
+
+  <!-- right panel -->
+  <rect x="468" y="58" width="400" height="358" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="484" y="81" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#ff9900">aws-resiliency skill</text>
+  <line x1="468" y1="91" x2="868" y2="91" stroke="#30363d" stroke-width="1"/>
+
+  <!-- status items -->
+  <circle cx="492" cy="132" r="5" fill="#3fb950"/>
+  <text x="508" y="137" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" fill="#3fb950">Loading skill context</text>
+
+  <circle cx="492" cy="172" r="5" fill="#3fb950"/>
+  <text x="508" y="177" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" fill="#3fb950">Parsing IaC structure</text>
+
+  <circle cx="492" cy="212" r="5" fill="#3fb950"/>
+  <text x="508" y="217" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" fill="#3fb950">Running two-layer scan</text>
+
+  <circle cx="492" cy="252" r="5" fill="#ff9900" class="pulse"/>
+  <text x="508" y="257" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" fill="#ff9900">Generating findings…</text>
+
+  <line x1="480" y1="285" x2="856" y2="285" stroke="#30363d" stroke-width="1"/>
+
+  <text x="508" y="316" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#6e7681">Domains detected:  DATA · OBSERVABILITY</text>
+  <text x="508" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#6e7681">IaC findings: 3   ·   App gaps: 1</text>
+  <text x="508" y="368" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#6e7681">Languages: CloudFormation</text>
+
+  <!-- caption -->
+  <text x="450" y="432" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#6e7681">IaC is automatically scanned across both infrastructure and application layers</text>
+</g>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     SCENE 3 — TWO-LAYER MODEL  (18 – 27 s)
+     ══════════════════════════════════════════════════════════════════════ -->
+<g class="s3">
+  <text x="450" y="78" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="18" font-weight="700" fill="#e6edf3">Two-Layer Review Model</text>
+  <text x="450" y="100" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#6e7681">Most incidents live in the gap between infra config and application behaviour</text>
+
+  <!-- Layer 1 box -->
+  <rect x="32" y="112" width="382" height="296" rx="10" fill="#58a6ff0c" stroke="#58a6ff" stroke-width="2"/>
+  <text x="48" y="138" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" font-weight="700" fill="#58a6ff">Layer 1 — IaC / Infrastructure</text>
+  <text x="56" y="170" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Single points of failure</text>
+  <text x="56" y="198" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Missing Multi-AZ config</text>
+  <text x="56" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Absent health checks</text>
+  <text x="56" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Backup retention gaps</text>
+  <text x="56" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Hardcoded capacity</text>
+  <text x="56" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Missing termination protection</text>
+  <text x="56" y="338" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Wrong retention settings</text>
+
+  <!-- Gap column -->
+  <rect x="422" y="160" width="56" height="200" rx="6" fill="#ff990014" stroke="#ff9900" stroke-width="1.5"/>
+  <text x="450" y="238" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" font-weight="700" fill="#ff9900">The</text>
+  <text x="450" y="256" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" font-weight="700" fill="#ff9900">Gap</text>
+  <text x="450" y="280" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="18" fill="#ff9900">⚡</text>
+
+  <!-- Layer 2 box -->
+  <rect x="486" y="112" width="382" height="296" rx="10" fill="#bc8cff0c" stroke="#bc8cff" stroke-width="2"/>
+  <text x="502" y="138" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" font-weight="700" fill="#bc8cff">Layer 2 — Application Behaviour</text>
+  <text x="510" y="170" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Missing retry with backoff</text>
+  <text x="510" y="198" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Connection pool exhaustion</text>
+  <text x="510" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Hardcoded endpoints</text>
+  <text x="510" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  No circuit breakers</text>
+  <text x="510" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Missing idempotency keys</text>
+  <text x="510" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  SDK clients inside handler</text>
+  <text x="510" y="338" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#e6edf3">·  Missing DLQ handlers</text>
+
+  <!-- callout -->
+  <rect x="32" y="422" width="836" height="52" rx="6" fill="#ff990010" stroke="#ff9900" stroke-width="1"/>
+  <text x="450" y="444" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" font-style="italic" fill="#ff9900">Example: Multi-AZ RDS is correctly configured — but if the app doesn't handle the</text>
+  <text x="450" y="462" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" font-style="italic" fill="#ff9900">60–120s DNS failover window, you still get a 2-minute outage.</text>
+</g>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     SCENE 4 — STRUCTURED FINDINGS  (27 – 36 s)
+     ══════════════════════════════════════════════════════════════════════ -->
+<g class="s4">
+  <text x="450" y="78" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="18" font-weight="700" fill="#e6edf3">Structured Findings</text>
+
+  <!-- CRITICAL card -->
+  <rect x="32" y="94" width="836" height="104" rx="8" fill="#f8514910" stroke="#f85149" stroke-width="1.5"/>
+  <rect x="46" y="108" width="94" height="22" rx="4" fill="#f8514930"/>
+  <text x="93" y="123" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" font-weight="700" fill="#f85149">● CRITICAL</text>
+  <text x="150" y="123"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" fill="#6e7681">DATA — RDS</text>
+  <text x="46" y="152"
+        font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#e6edf3">MultiAZ: false  →  single AZ = full outage on any AZ failure</text>
+  <text x="46" y="178"
+        font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="11" fill="#6e7681">Blast radius: full service  |  RTO: hours  |  REL 10</text>
+  <text x="854" y="178" text-anchor="end"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#3fb950">→ Fix available</text>
+
+  <!-- HIGH card -->
+  <rect x="32" y="210" width="836" height="104" rx="8" fill="#d2992210" stroke="#d29922" stroke-width="1.5"/>
+  <rect x="46" y="224" width="72" height="22" rx="4" fill="#d2992230"/>
+  <text x="82" y="239" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" font-weight="700" fill="#d29922">● HIGH</text>
+  <text x="128" y="239"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" fill="#6e7681">DATA — RDS</text>
+  <text x="46" y="268"
+        font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#e6edf3">BackupRetentionPeriod: 1  →  RPO: 23h of data loss risk</text>
+  <text x="46" y="294"
+        font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="11" fill="#6e7681">RPO impact: up to 23 hours  |  REL 8</text>
+  <text x="854" y="294" text-anchor="end"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#3fb950">→ Fix available</text>
+
+  <!-- MEDIUM card -->
+  <rect x="32" y="326" width="836" height="104" rx="8" fill="#db6d2810" stroke="#db6d28" stroke-width="1.5"/>
+  <rect x="46" y="340" width="88" height="22" rx="4" fill="#db6d2830"/>
+  <text x="90" y="355" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" font-weight="700" fill="#db6d28">● MEDIUM</text>
+  <text x="144" y="355"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" fill="#6e7681">DATA — RDS</text>
+  <text x="46" y="384"
+        font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="13" fill="#e6edf3">DeletionProtection: false  →  accidental delete risk</text>
+  <text x="46" y="410"
+        font-family="'SF Mono',Monaco,'Courier New',monospace"
+        font-size="11" fill="#6e7681">REL 9  |  effort: 5 min fix</text>
+  <text x="854" y="410" text-anchor="end"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#3fb950">→ Fix available</text>
+
+  <!-- footer -->
+  <text x="450" y="458" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#6e7681">github.com/nirmal84/aws-resiliency-skill</text>
+  <text x="450" y="476" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" fill="#6e7681">Star · Fork · Contribute</text>
+</g>
+</svg>
