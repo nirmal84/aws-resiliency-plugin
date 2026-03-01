@@ -1,4 +1,4 @@
-# AWS Resiliency MCP Plugin
+# AWS Resiliency Plugin
 
 An MCP plugin that configures 6 official AWS MCP servers from [`awslabs/mcp`](https://github.com/awslabs/mcp) for resiliency-focused architecture reviews. Works with Claude Code, Cursor, Windsurf, Kiro, and any MCP-compatible editor.
 
@@ -94,8 +94,8 @@ The skill gives your AI agent deep AWS resiliency expertise:
 **Step 1: Install the skill**
 
 ```bash
-git clone https://github.com/nirmal84/aws-resiliency-mcp.git
-cp -r aws-resiliency-mcp/skills ~/.claude/skills/aws-resiliency
+git clone https://github.com/nirmal84/aws-resiliency-plugin.git
+cp -r aws-resiliency-plugin/skills ~/.claude/skills/aws-resiliency
 ```
 
 **Step 2: Add the MCP servers**
@@ -196,7 +196,7 @@ The skill always reviews **both layers** — because most production incidents l
 ## File Structure
 
 ```
-aws-resiliency-mcp/
+aws-resiliency-plugin/
 ├── mcp.json                                          # MCP server configuration (6 servers)
 ├── skills/
 │   ├── SKILL.md                                      # Core resiliency skill

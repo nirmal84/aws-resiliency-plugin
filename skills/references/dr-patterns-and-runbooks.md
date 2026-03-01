@@ -1,6 +1,6 @@
 # DR Patterns, Runbooks & Game Day — Reference
 
-Templates and guidance for TAMs preparing customer DR assessments, ORRs, and game days.
+Templates and guidance for preparing DR assessments, ORRs, and game days.
 
 ---
 
@@ -116,7 +116,7 @@ Templates and guidance for TAMs preparing customer DR assessments, ORRs, and gam
 - [ ] Communication channel established (Slack/Teams war room)
 - [ ] Customer stakeholders notified (if production game day)
 - [ ] Rollback plan documented if game day causes unintended impact
-- [ ] AWS account team notified (TAM + SA)
+- [ ] AWS account team notified (if applicable)
 
 **Define success criteria:**
 - RTO target: _____ minutes
@@ -240,9 +240,9 @@ major traffic event (sports finals, racing carnival, product launch).
 
 ---
 
-## TAM Advisory — Conversations That Matter
+## Key Resiliency Questions — Conversations That Matter
 
-Questions that unlock the most valuable resiliency discussions with enterprise customers:
+Questions that unlock the most valuable resiliency discussions with engineering teams:
 
 **On RTO/RPO:**
 > "If your platform went completely down right now, what would be the business impact

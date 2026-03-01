@@ -1,6 +1,6 @@
 # AWS Well-Architected Reliability Pillar — Reference
 
-Mapped to resiliency best practices for TAM reviews and formal WARs.
+Mapped to resiliency best practices for architecture reviews and formal WARs.
 
 ---
 
@@ -23,7 +23,7 @@ Mapped to resiliency best practices for TAM reviews and formal WARs.
 - Implement retry with backoff for throttled requests
 - Use CloudWatch to alarm when approaching quota limits (e.g. Lambda concurrency at 80% of limit)
 
-**TAM questions to ask:**
+**Key questions to ask:**
 - "Have you mapped your peak traffic projections against your Lambda concurrency limits?"
 - "Do you have quota increase requests in flight for your growth projections?"
 
@@ -81,7 +81,7 @@ Mapped to resiliency best practices for TAM reviews and formal WARs.
 - Use composite alarms to capture multi-signal failure modes
 - `TreatMissingData: breaching` on all critical alarms
 
-**TAM questions to ask:**
+**Key questions to ask:**
 - "What's your MTTD (mean time to detect) for a full service outage?"
 - "Do you have alarms on business metrics — bet placement rate, transaction volume — not just infrastructure?"
 - "Would you know if your DLQ was filling up at 3am?"
@@ -127,7 +127,7 @@ Mapped to resiliency best practices for TAM reviews and formal WARs.
 - Enable versioning on S3; PITR on RDS and DynamoDB
 - Encrypt all backups with CMK
 
-**TAM questions to ask:**
+**Key questions to ask:**
 - "When did you last test a restore from backup?"
 - "If your primary region became unavailable for 48 hours, where would you restore to?"
 - "Are your backups in the same account as production?" (If yes — account compromise = lose backups)
@@ -172,7 +172,7 @@ Mapped to resiliency best practices for TAM reviews and formal WARs.
 - `aws:sqs:send-message` — Inject poison pill messages
 - `aws:fis:inject-api-internal-error` — Simulate AWS API failures
 
-**TAM questions to ask:**
+**Key questions to ask:**
 - "Have you run a game day in the last 6 months?"
 - "Do you have documented, tested runbooks for your top 5 failure scenarios?"
 - "Has your on-call team ever actually executed a DR failover, or only tabletop exercised it?"

@@ -1,6 +1,6 @@
 # AWS Resiliency Review — Output Template
 
-Use for formal TAM customer deliverables and pull request resiliency reports.
+Use for formal review deliverables and pull request resiliency reports.
 
 ---
 
