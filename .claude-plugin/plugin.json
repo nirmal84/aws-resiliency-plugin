@@ -1,0 +1,12 @@
+{
+  "name": "aws-resiliency",
+  "description": "AWS resiliency expert for Cloud Engineers, SREs, and Architects. Reviews CDK, CloudFormation, Terraform, and SAM code for failure modes, single points of failure, RTO/RPO gaps, and Well-Architected Reliability pillar findings.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nirmal Kumar",
+    "url": "https://github.com/nirmal84"
+  },
+  "homepage": "https://github.com/nirmal84/aws-resiliency-plugin",
+  "repository": "https://github.com/nirmal84/aws-resiliency-plugin",
+  "license": "MIT"
+}
