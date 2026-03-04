@@ -1,0 +1,26 @@
+{
+  "name": "aws-resiliency-plugin",
+  "owner": {
+    "name": "Nirmal Kumar",
+    "email": ""
+  },
+  "metadata": {
+    "description": "AWS resiliency plugin — reviews CDK, CloudFormation, Terraform, and SAM code for failure modes, single points of failure, RTO/RPO gaps, and Well-Architected Reliability pillar findings.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "aws-resiliency",
+      "source": "./",
+      "version": "1.0.0",
+      "category": "cloud-operations",
+      "description": "AWS resiliency expert that reviews IaC (CDK, CloudFormation, Terraform, SAM) for failure modes, single points of failure, RTO/RPO gaps, and Well-Architected Reliability findings across Compute, Data, Networking, Storage, Messaging, Observability, and Multi-Region DR.",
+      "keywords": [
+        "aws", "resiliency", "reliability", "well-architected", "cdk",
+        "cloudformation", "terraform", "sam", "rto", "rpo", "disaster-recovery",
+        "multi-region", "sre", "cloud-operations"
+      ],
+      "tags": ["aws", "resiliency", "infrastructure", "reliability"]
+    }
+  ]
+}
